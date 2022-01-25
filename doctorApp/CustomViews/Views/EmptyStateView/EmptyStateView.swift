@@ -7,6 +7,7 @@
 
 import UIKit
 
+// Empty State
 class EmptyState: UIView {
     
     let messageLabel = AlertTitleLabel(textAligment: .center, fontSize: 28)

@@ -11,5 +11,6 @@ class FavoritesCell: UITableViewCell {
     
     static let identifier = String(describing: FavoritesCell.self)
     
+    // displaying Func 
     
 }
