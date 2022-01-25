@@ -23,7 +23,8 @@ class DoctorProfileViewController: UIViewController {
     
     var doctorDetails: Doctor?
     
-
+    private let userID = UserDefaults.standard.string(forKey: "UserInfo")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getDoctorDetail()
@@ -47,21 +48,18 @@ class DoctorProfileViewController: UIViewController {
     }
     
     @IBAction func didTapFavorite(_ sender: Any) {
-        guard let token = UserDefaults.standard.string(forKey: "jsonwebtoken"), let d = doctorDetails else { return }
-        
-        
-        
-//        NetworkManager.shared.addFavorite(token: token, d_id: d._id, d_image: d.image!, d_name: d.name, d_title: d.title, d_availiable: d.availiable, d_experience: d.experience, d_certificate: d.certificate, d_patients: d.patients, d_price: d.price, d_tell: d.tell, d_description: d.description, d_isFavorited: true, d_categoryId: d.categoryId) { [weak self] result in
-//            switch result {
-//            case .success(_):
-//                DispatchQueue.main.async {
-//                    self?.favoriteBtn.setBackgroundImage(UIImage(systemName: "star.fill"), for: .normal)
-//                    self?.presentAlertOnMainThread(title: "Successfull", message: "You have successfull favorite this Doctor 🎉", btnTitle: "Ok")
-//                }
-//            case .failure(let err):
-//                print(err.localizedDescription)
-//            }
-//        }
+        showLoadingview()
+        NetworkManager.shared.addFavorites(userID: userID!, doctorID: doctorDetails?._id ?? "nil") { [weak self] result in
+            switch result {
+            case .success(let res):
+                DispatchQueue.main.async {
+                    self?.dismissLoding()
+                    self?.presentAlertOnMainThread(title: "\(res.status == 200 ? "Successfull 🎉" : "Opps!")", message: "\(res.message)", btnTitle: "ok")
+                }
+            case .failure(let err):
+                self?.presentAlertOnMainThread(title: "Error", message: err.rawValue, btnTitle: "ok")
+            }
+        }
     }
     
     
