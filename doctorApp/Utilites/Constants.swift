@@ -16,5 +16,5 @@ struct Constants {
     static let create_user      = "http://localhost:9000/api/user/create_user"
     static let user_Appoinments = "http://localhost:9000/api/appointment/user_appointment/"
     static let user             = "http://localhost:9000/api/user/me/"
-    static let favoriteDoctor   = "http://localhost:9000/api/doctors/update-Doctor/"
+    static let makeFavorite   = "http://localhost:9000/api/create-Favorites"
 }
