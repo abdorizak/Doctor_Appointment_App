@@ -620,16 +620,16 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cX-mr-oWZ">
-                                                                <rect key="frame" x="359" y="19.5" width="45" height="45"/>
+                                                                <rect key="frame" x="374" y="22" width="30" height="26"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="45" id="kuS-7X-7Ee"/>
-                                                                    <constraint firstAttribute="width" constant="45" id="osS-fq-yvc"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="kuS-7X-7Ee"/>
+                                                                    <constraint firstAttribute="width" constant="30" id="osS-fq-yvc"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                                 <color key="tintColor" red="0.1176470588" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" backgroundImage="star" catalog="system"/>
+                                                                <state key="normal" backgroundImage="plus" catalog="system"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <real key="value" value="10"/>
@@ -1362,6 +1362,7 @@
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="singUp" width="6000" height="3500"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <namedColor name="AccentColor">
