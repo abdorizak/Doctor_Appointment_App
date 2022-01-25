@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="doctorApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="180" height="300"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OWo-3w-5IJ" customClass="CardView" customModule="doctorApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="300"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xt9-Cc-P4l">
+                                <rect key="frame" x="8" y="8" width="164" height="284"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7f-Fv-Vdr">
+                                        <rect key="frame" x="0.0" y="0.0" width="164" height="254.5"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fy-q3-jO0">
+                                        <rect key="frame" x="0.0" y="262.5" width="164" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Xt9-Cc-P4l" secondAttribute="bottom" constant="8" id="97T-qP-WPT"/>
+                            <constraint firstAttribute="trailing" secondItem="Xt9-Cc-P4l" secondAttribute="trailing" constant="8" id="9d4-tM-her"/>
+                            <constraint firstItem="Xt9-Cc-P4l" firstAttribute="leading" secondItem="OWo-3w-5IJ" secondAttribute="leading" constant="8" id="Kpf-pu-EPI"/>
+                            <constraint firstAttribute="width" constant="180" id="RwD-qK-FoZ"/>
+                            <constraint firstItem="Xt9-Cc-P4l" firstAttribute="top" secondItem="OWo-3w-5IJ" secondAttribute="top" constant="8" id="eiz-aB-6nc"/>
+                            <constraint firstAttribute="height" constant="300" id="gNt-Oc-pIt"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="OWo-3w-5IJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Sre-g8-NeK"/>
+                <constraint firstAttribute="bottom" secondItem="OWo-3w-5IJ" secondAttribute="bottom" id="YPv-2L-1sy"/>
+                <constraint firstAttribute="trailing" secondItem="OWo-3w-5IJ" secondAttribute="trailing" id="bf5-Ye-34v"/>
+                <constraint firstItem="OWo-3w-5IJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="uDo-cU-J8L"/>
+            </constraints>
+            <size key="customSize" width="162" height="227"/>
+            <connections>
+                <outlet property="categoryImage" destination="V7f-Fv-Vdr" id="czL-xE-Tz8"/>
+                <outlet property="categoryNameLbl" destination="6Fy-q3-jO0" id="Mso-D5-uuC"/>
+            </connections>
+            <point key="canvasLocation" x="118.84057971014494" y="132.58928571428572"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
