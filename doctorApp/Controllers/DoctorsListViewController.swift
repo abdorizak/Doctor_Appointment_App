@@ -29,8 +29,7 @@ class DoctorsListViewController: UIViewController {
     }
     
     func getListOfDoctors(){
-        guard let token = UserDefaults.standard.string(forKey: "jsonwebtoken") else { return }
-        NetworkManager.shared.getDoctors(token: token) { result in
+        NetworkManager.shared.getDoctors() { result in
             switch result {
             case .success(let doctors):
                 DispatchQueue.main.async {

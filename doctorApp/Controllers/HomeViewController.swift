@@ -25,8 +25,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         case singout
     }
     
-    private let token = UserDefaults.standard.string(forKey: "jsonwebtoken")
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationUI()
@@ -92,10 +90,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func fetchCategorie() {
-        guard let token = token else {
-            return
-        }
-        NetworkManager.shared.getCategorys(token: token) { result in
+        NetworkManager.shared.getCategorys() { result in
             switch result {
             case .success(let category):
                 DispatchQueue.main.async {
@@ -110,10 +105,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func fetchTopDoctors() {
-        guard let token = token else {
-            return
-        }
-        NetworkManager.shared.getTopDoctors(token: token) { result in
+        NetworkManager.shared.getTopDoctors() { result in
             switch result {
             case .success(let doctors):
                 DispatchQueue.main.async {
