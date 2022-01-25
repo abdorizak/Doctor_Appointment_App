@@ -15,7 +15,7 @@ struct DoctorsCategory: Codable {
     let category: [Doctor]?
 }
 
-struct Doctor: Codable, Hashable {
+struct Doctor: Codable {
     let _id: String
     let image: String?
     let name: String
@@ -35,25 +35,4 @@ struct CategoryDoctors: Codable {
     let status: Int
     let message: String
     let category: [Doctor]
-}
-
-struct UpdatedDoctor: Codable {
-    let status: Int
-    let message: String
-}
-
-
-struct updateDoctorBody: Codable {
-    let image: String?
-    let name: String
-    let title: String
-    let availiable: String
-    let experience: String
-    let certificate: String
-    let patients: String
-    let price: String
-    let tell: Int
-    let description: String
-    let isFavorited: Bool
-    let categoryId: String
 }

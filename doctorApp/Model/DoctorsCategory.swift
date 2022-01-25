@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import UIKit
+
 
 struct DoctorsCategorys: Codable {
     let categories: [Category]
