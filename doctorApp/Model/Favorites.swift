@@ -16,13 +16,13 @@ struct FavoriteBody: Codable {
     let userID: String
     let doctorID: String
 }
-
-
-
+struct Favorited: Codable {
+    let status: Int
+    let favorited: [Favorites]
+}
 
 struct Favorites: Codable {
     let _id: String
     let doctorID: Doctor
-    let userID: String
 }
 
