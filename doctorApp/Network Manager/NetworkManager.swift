@@ -13,6 +13,40 @@ final class NetworkManager {
     
     private let token = UserDefaults.standard.string(forKey: "jsonwebtoken")
     
+    
+    func getFavorites(userID: String, completion: @escaping (Result<Favorited, DoctorAppointmentErrors>) -> Void) {
+        
+        guard let url = URL(string: Constants.favorites + "\(userID)") else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        
+        guard let token = token else {
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "authorization")
+        
+        URLSession.shared.dataTask(with: request) { data, _, error in
+            guard let data = data, error == nil else {
+                completion(.failure(.inValidData))
+                return
+            }
+            
+            do {
+                let res = try JSONDecoder().decode(Favorited.self, from: data)
+                completion(.success(res))
+            } catch {
+                completion(.failure(.decodingError))
+            }
+        }.resume()
+        
+        
+    }
+    
+    
     // Add Favorites
     func addFavorites(userID: String, doctorID: String, completion: @escaping (Result<AddFavorited, DoctorAppointmentErrors>) -> Void) {
         
@@ -49,7 +83,7 @@ final class NetworkManager {
                 let res = try JSONDecoder().decode(AddFavorited.self, from: data)
                 completion(.success(res))
             } catch {
-                print(error)
+                completion(.failure(.decodingError))
             }
             
         }.resume()
@@ -77,7 +111,6 @@ final class NetworkManager {
             
             do {
                 let res = try JSONDecoder().decode(Appointments.self, from: data)
-//                print(res)
                 completion(.success(res))
             } catch {
                 completion(.failure(.decodingError))
