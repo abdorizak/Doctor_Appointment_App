@@ -1099,7 +1099,7 @@
         <!--Favorite View Controller-->
         <scene sceneID="do4-GY-oUv">
             <objects>
-                <viewController id="5sD-Km-hXl" customClass="FavoriteViewController" customModule="doctorApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteViewController" id="5sD-Km-hXl" customClass="FavoriteViewController" customModule="doctorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hhL-es-gtR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
