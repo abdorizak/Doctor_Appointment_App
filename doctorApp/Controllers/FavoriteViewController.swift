@@ -10,15 +10,43 @@ import UIKit
 class FavoriteViewController: UIViewController {
     
     let tableView = UITableView()
-    var favorites: [String?] = []
 
+    var doctor = [Doctor]()
+    private let userID = UserDefaults.standard.string(forKey: "UserInfo")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Favorites"
         navigationController?.navigationBar.prefersLargeTitles = true
+        getFavorite()
         configureTableView()
-        
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getFavorite()
+    }
+    
+    
+    func getFavorite() {
+        NetworkManager.shared.getFavorites(userID: userID!) { [weak self] result in
+            switch result {
+            case .success(let res):
+                DispatchQueue.main.async {
+                    let doctorDetails = res.favorited.map { f in
+                        f.doctorID
+                    }
+                    self?.doctor = doctorDetails
+                    self?.tableView.reloadData()
+                }
+            case .failure(let err):
+                print(err.rawValue)
+            }
+        }
+    }
+    
+    
     
     private func configureTableView() {
         view.addSubview(tableView)
@@ -36,12 +64,12 @@ class FavoriteViewController: UIViewController {
 extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        doctor.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: FavoritesCell.identifier, for: indexPath) as! FavoritesCell
+        cell.display(Favorite: doctor[indexPath.row])
         return cell
     }
     
