@@ -18,12 +18,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     var category = [Category]()
     var selectedCategory: Category?
     
-    var gearItems = ["Profile", "Sigout"]
+    var gearItems = ["Profile", "Singout"]
     
-    enum Gears: CaseIterable {
-        case profile
-        case singout
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
