@@ -4,7 +4,7 @@ This is simple app It also connects patients with doctors by requesting there Fa
 
 ### Image
 
-[Image](img/Doc.jpg)
+![Image](img/Doc.jpg)
 
 ## Credits
 
