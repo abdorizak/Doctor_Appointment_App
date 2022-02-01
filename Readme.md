@@ -8,4 +8,4 @@ This is simple app It also connects patients with doctors by requesting there Fa
 
 ## Credits
 
-**©** **ABDORIZAK ABDALLA HASSAN** | _2022_
+**©** **ABDORIZAK ABDALLA HASSAN** | 2022
