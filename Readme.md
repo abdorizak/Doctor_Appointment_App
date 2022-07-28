@@ -1,15 +1,7 @@
 # Doctor Appointment App
 
 ### Overview
-This is simple app It also connects patients with doctors by requesting there Favorite doctor.
-
-### Includes ( ALL SWift UiKit )
-- Storyboard.
-- using Native Apple APIs to request Web Api's.
-- Table View.
-- Collection View.
-- Custom Views, and Date Picker.
-- Node JS, Express, MongoDB, Backend.
+This is simple app It also connects patients with doctors by requesting there Favorite doctor, It also allow the users to make favorite.
 
 ### Screenshots
 
@@ -20,6 +12,14 @@ This is simple app It also connects patients with doctors by requesting there Fa
 - change the bundle identifier in project settings.
 - run the app.
 - requires xcode 12.0 +
+
+### Includes ( ALL SWift UIkit Framework )
+- Storyboard.
+- using Native Apple APIs to request Web Api's.
+- Table View.
+- Collection View.
+- Custom Views, and Date Picker.
+- Node JS, Express, MongoDB, Backend.
 
 ## Author
 **ABDORIZAK ABDALLA HASSAN** aka xMan
