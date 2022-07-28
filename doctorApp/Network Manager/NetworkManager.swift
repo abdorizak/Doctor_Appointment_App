@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 final class NetworkManager {
     static let shared = NetworkManager()
     let cache = NSCache<NSString, UIImage>()
@@ -78,7 +77,6 @@ final class NetworkManager {
             }
             
             do {
-//                let res = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
                 let res = try JSONDecoder().decode(AddFavorited.self, from: data)
                 completion(.success(res))
             } catch {
@@ -170,7 +168,6 @@ final class NetworkManager {
             
             do{
                 let result = try JSONDecoder().decode(CategoryDoctors.self, from: data)
-//                let result = try JSONSerialization.jsonObject(with: data, options: [])
                 completion(.success(result))
             } catch {
                 completion(.failure(.decodingError))
@@ -206,8 +203,6 @@ final class NetworkManager {
                 completion(.failure(.decodingError))
                 return
             }
-            
-            
             completion(.success(res))
             
         }.resume()
@@ -271,14 +266,12 @@ final class NetworkManager {
             
             do{
                 let doctors = try JSONDecoder().decode(Doctors.self, from: data)
-//                print(doctors)
                 completion(.success(doctors))
             } catch {
                 completion(.failure(.decodingError))
             }
 
         }.resume()
-        
     }
     
     // GetAll Doctors
@@ -303,7 +296,6 @@ final class NetworkManager {
             
             do{
                 let doctors = try JSONDecoder().decode(Doctors.self, from: data)
-//                print(doctors)
                 completion(.success(doctors))
             } catch {
                 completion(.failure(.decodingError))
