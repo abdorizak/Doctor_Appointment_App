@@ -1,4 +1,4 @@
-<h1 align="center"> Doctor Appointment App </h1>
+### <h1 align="center"> Doctor Appointment App </h1>
 
 ### Overview
 This is simple app It also connects patients with doctors by requesting there Favorite doctor, whether they have insurance in place or not. It also offers 24/7 access to quality care with face-to-face visits.
@@ -24,4 +24,4 @@ This is simple app It also connects patients with doctors by requesting there Fa
 ## Author
 **ABDORIZAK ABDALLA HASSAN** aka xMan
 
-<h4 align="center">**©** Doctor Appointment App | 2021</h4>
+<h4 align="center"> © Doctor Appointment App || 2021</h4>
