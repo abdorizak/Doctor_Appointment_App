@@ -1,4 +1,4 @@
-# <h1 align="center"> Doctor Appointment App </h1>
+# Doctor Appointment App
 
 ### Overview
 This is simple app It also connects patients with doctors by requesting there Favorite doctor, whether they have insurance in place or not. It also offers 24/7 access to quality care with face-to-face visits.
