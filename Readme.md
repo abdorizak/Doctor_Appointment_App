@@ -15,10 +15,12 @@ This is simple app It also connects patients with doctors by requesting there Fa
 
 ### Includes ( ALL SWift UIkit Framework )
 - Storyboard.
-- using Native Apple APIs to request Web Api's.
+- using Native Apple APIs to request Api's.
 - Table View.
 - Collection View.
 - Custom Views, and Date Picker.
+
+### Backend of the App 📱
 - Node JS, Express, MongoDB, Backend.
 
 ## Author
